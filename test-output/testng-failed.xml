@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Suite]">
+  <parameter name="uname" value="DemoSalesManager"/>
+  <parameter name="pswd" value="crmsfa"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="URL" value="http://leaftaps.com/opentaps"/>
+  <test name="Test1(failed)">
+    <parameter name="uname" value="DemoSalesManager"/>
+    <parameter name="pswd" value="crmsfa"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="URL" value="http://leaftaps.com/opentaps"/>
+    <classes>
+      <class name="week4groups.TC001_CreateLead">
+        <methods>
+          <include name="createLead" invocation-numbers="0"/>
+          <include name="closeApplication"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- week4groups.TC001_CreateLead -->
+      <class name="week4groups.TC003_DeleteLead">
+        <methods>
+          <include name="DeleteLead"/>
+        </methods>
+      </class> <!-- week4groups.TC003_DeleteLead -->
+      <class name="week4groups.TC005_DuplicateLead">
+        <methods>
+          <include name="Duplicate"/>
+        </methods>
+      </class> <!-- week4groups.TC005_DuplicateLead -->
+      <class name="week4groups.TC002_EditLead">
+        <methods>
+          <include name="TC002_editLead"/>
+        </methods>
+      </class> <!-- week4groups.TC002_EditLead -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

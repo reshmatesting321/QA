@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Execution(Tip : Without Groups )
+ 	 i)  Run create and edit lead sequentially and others parallely -->
+<suite name="Suite" parallel="none">
+<parameter name="browser" value="chrome"></parameter>
+  <parameter name="URL" value="http://leaftaps.com/opentaps"></parameter>
+  <parameter name="uname" value="DemoSalesManager"></parameter>
+  <parameter name="pswd" value="crmsfa"></parameter> 
+	<test name="Test1">
+	
+		<classes>
+		<class name="openaptaps.TC001_CreateLead" />
+		<class name="openaptaps.TC002_EditLead" />
+			<class name="openaptaps.TC003_DeleteLead" />
+			
+			
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Test2" parallel="classes" thread-count="2">
+	
+		<classes>
+			<class name="openaptaps.TC004_MergeLead" />
+			<class name="openaptaps.TC005_DuplicateLead" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
